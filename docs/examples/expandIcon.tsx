@@ -30,6 +30,7 @@ function CustomExpandIcon(props) {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: text }}
       style={{ color: 'blue', cursor: 'pointer' }}
+      aria-label={`${props.expanded ? 'collapse' : 'expand'} row ${props.rowIndex}`}
     />
   );
 }

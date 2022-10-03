@@ -210,6 +210,7 @@ function useColumns<RecordType>(
             expanded,
             expandable: recordExpandable,
             record,
+            rowIndex: index,
             onExpand: onTriggerExpand,
           });
 

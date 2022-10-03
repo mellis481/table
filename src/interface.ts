@@ -189,6 +189,7 @@ export interface RenderExpandIconProps<RecordType> {
   expanded: boolean;
   record: RecordType;
   expandable: boolean;
+  rowIndex: number;
   onExpand: TriggerEventHandler<RecordType>;
 }
 

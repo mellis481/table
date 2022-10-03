@@ -143,6 +143,7 @@ function BodyRow<RecordType extends { children?: readonly RecordType[] }>(
                 expanded,
                 expandable: hasNestChildren,
                 record,
+                rowIndex: index,
                 onExpand: onInternalTriggerExpand,
               })}
             </>

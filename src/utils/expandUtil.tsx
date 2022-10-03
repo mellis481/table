@@ -21,7 +21,7 @@ export function renderExpandIcon<RecordType>({
   };
 
   return (
-    <span
+    <button
       className={classNames(expandClassName, {
         [`${prefixCls}-row-expanded`]: expanded,
         [`${prefixCls}-row-collapsed`]: !expanded,
