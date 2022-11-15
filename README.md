@@ -1,4 +1,4 @@
-# rc-table
+# rc-table TEST
 
 React table component with useful functions.
 
