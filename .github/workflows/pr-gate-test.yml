@@ -1,0 +1,21 @@
+name: PR gate workflow
+on: pull_request
+jobs:
+  prepare:
+    name: 'Prepare'
+    runs-on: [self-hosted, Standard]
+    outputs:
+      uuid: ${{ steps.uuid.outputs.value }}
+      commitMessage: ${{ steps.commitMessage.outputs.value }}
+    steps:
+      - id: uuid
+        run: echo "::set-output name=value::sha-$GITHUB_SHA-time-$(date +"%s")"
+      - id: commitMessage
+        run: echo "::set-output name=value::sha-${github.event.pull_request.title//,/}"
+
+  testjob:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log
+        run: echo "commitMessage=${{ needs.prepare.outputs.commitMessage }}"
