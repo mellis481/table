@@ -3,7 +3,7 @@ on: pull_request
 jobs:
   prepare:
     name: 'Prepare'
-    runs-on: [self-hosted, Standard]
+    runs-on: ubuntu-latest
     outputs:
       uuid: ${{ steps.uuid.outputs.value }}
       commitMessage: ${{ steps.commitMessage.outputs.value }}
